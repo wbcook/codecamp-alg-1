@@ -1,0 +1,14 @@
+{
+  "name": "codecamp-alg-1",
+  "version": "1.0.0",
+  "description": "beginner algorithms",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "wbcook",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "3.5.0"
+  }
+}
