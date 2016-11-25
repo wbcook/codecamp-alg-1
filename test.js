@@ -73,6 +73,33 @@ describe('Reverse a String', function() {
   });
 });
 
+describe('Factorialize a Number', function() {
+  describe('#factorialize()', function() {
+    it('should return the factorial of the provided integer', function() {
+
+      function factorialize(num) {
+
+        var result = 1;
+
+        for (var i = 1; i <= num; i++) {
+
+          result = result * i;
+
+        }
+
+        return result;
+      }
+
+      factorialize(5).should.be.a('number');
+      factorialize(5).should.equal(120);
+      factorialize(10).should.equal(3628800);
+      factorialize(20).should.equal(2432902008176640000);
+      factorialize(0).should.equal(1);
+
+    });
+  });
+});
+
 // .------------------------------------------------------------------.
 // |                                  _                               |
 // |                              - `   `' .                         /|

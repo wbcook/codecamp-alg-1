@@ -4,7 +4,7 @@
   "description": "beginner algorithms",
   "main": "test.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --colors"
   },
   "author": "wbcook",
   "license": "ISC",
