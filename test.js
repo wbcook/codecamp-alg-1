@@ -100,6 +100,59 @@ describe('Factorialize a Number', function() {
   });
 });
 
+describe('Check for Palindromes', function() {
+  describe('#palindrome()', function() {
+    it('should return true if the given string is a palindrome. Otherwise, return false.', function() {
+
+      function palindrome(str) {
+
+        var fwd = str.replace(/[\W_]/g, '').toLowerCase();
+        bwd = reverseString(str.replace(/[\W_]/g, '').toLowerCase());
+
+        if (fwd === bwd) {
+          return true;
+        } else {
+          return false;
+        }
+
+        return str;
+
+      }
+
+      function reverseString(string) {
+
+        string = string.split(' ');
+
+        for (var i = 0; i < string.length; i++) {
+
+          string[i] = string[i].split('').reverse().join('');
+
+        }
+
+        string = string.reverse().join(' ');
+
+        return string;
+
+      }
+
+      palindrome("eye").should.be.a('boolean');
+      palindrome("eye").should.equal(true);
+      palindrome("_eye").should.equal(true);
+      palindrome("race car").should.equal(true);
+      palindrome("not a palindrome").should.equal(false);
+      palindrome("A man, a plan, a canal. Panama").should.equal(true);
+      palindrome("never odd or even").should.equal(true);
+      palindrome("nope").should.equal(false);
+      palindrome("almostomla").should.equal(false);
+      palindrome("My age is 0, 0 si ega ym.").should.equal(true);
+      palindrome("1 eye for of 1 eye.").should.equal(false);
+      palindrome("0_0 (: /-\ :) 0-0").should.equal(true);
+      palindrome("five|\_/|four").should.equal(false);
+
+    });
+  });
+});
+
 // .------------------------------------------------------------------.
 // |                                  _                               |
 // |                              - `   `' .                         /|
