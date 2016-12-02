@@ -32,20 +32,6 @@ describe('Tea Ceremony', function() {
   });
 });
 
-//***
-// Reverse a String
-//***
-
-// You may need to turn the string into an array before you can reverse it.
-//
-// Your result must be a string.
-
-// Global String Object
-// String.prototype.split()
-// Array.prototype.forEach()
-// Array.prototype.reverse()
-// Array.prototype.join()
-
 describe('Reverse a String', function() {
   describe('#reverseString()', function() {
     it('should reverse the provided string', function() {

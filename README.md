@@ -1,0 +1,20 @@
+***String***
+* String.prototype.split()
+* String.prototype.replace()
+* String.prototype.toUpperCase()
+* String.prototype.toLowerCase()
+* String.prototype.replace()
+* String.prototype.join()
+
+***Array***
+* Array.prototype.map()
+* Array.prototype.filter()
+* Array.prototype.reduce()
+* Array.prototype.reverse()
+* Array.prototype.join()
+* Array.prototype.sort()
+* Array.prototype.concat()
+* Array.prototype.push()
+* Array.prototype.pop()
+* Array.prototype.shift()
+* Array.prototype.unshift()
