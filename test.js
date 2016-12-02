@@ -153,37 +153,54 @@ describe('Check for Palindromes', function() {
   });
 });
 
-// .------------------------------------------------------------------.
-// |                                  _                               |
-// |                              - `   `' .                         /|
-// |                          - `            `.                     L |
-// |                        .                  ;- .                J  |
-// |                       -                    _.,;               L  |
-// |                      '                    '   | ..           /   |
-// |                     '                       /`/    -        J    |
-// |                    :      ,-""-.             |   .  ` `-.   L    |
-// |                     `_--.  _.-. `.         `-'  '         `/     |
-// |\                     (0)/ J|(0)) |          -  .          L      |
-// | \                   .`-/  J '-' /           \            J       |
-// |  \                .-  /  _ .-"`           \              L       |
-// |   \              .   Y  (O  `-            \          __ J        |
-// |    \                 L`__     '         \          .`  )L        |
-// |     \           '    `^__`;'`  \       \          /    /         |
-// |      \               -               \            |    \         |
-// |       \        '     / /        \   \             |     \   /`\  |
-// |        \      .       ' /|| \ `  \ \              |      \  \  \ |
-// |         \    .        .            |               \      `.|   Y|
-// |          \  .        :             |               J\           ||
-// |           \.        :              J               L \          ;|
-// |  _       _/        .               L              /   \         \|
-// | ( `-._.-'         .                 \            L     `._       |
-// |,._     _.'       .`                  \          J        `.      |
-// ||  `````  .' ,  /|                     `-.       L          \     |
-// |`._   __.'  /  / |\                       `-.,__./           \    |
-// |   ```,`   /  / /  \                            J             \   |
-// |  .-'    ,'  /_/    \                           L              \  |
-// |  `._.-'.__.'     sk \                         J                \ |
-// '------------------------------------------------------------------'
+
+
+describe('Find the Longest Word in a String', function() {
+  describe('#findLongestWord', function() {
+    it('should return the length of the longest word in the provided sentence.', function() {
+
+      function findLongestWord(str) {
+
+        str = str.split(' ').sort(function(a,b){return b.length - a.length});
+
+        return str[0].length;
+
+      }
+
+      findLongestWord("The quick brown fox jumped over the lazy dog").should.be.a('number');
+      findLongestWord("The quick brown fox jumped over the lazy dog").should.equal(6);
+      findLongestWord("May the force be with you").should.equal(5);
+      findLongestWord("Google do a barrel roll").should.equal(6);
+      findLongestWord("What is the average airspeed velocity of an unladen swallow").should.equal(8);
+      findLongestWord("What if we try a super-long word such as otorhinolaryngology").should.equal(19);
+
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //***
 // EOF
