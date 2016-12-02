@@ -178,6 +178,33 @@ describe('Find the Longest Word in a String', function() {
   });
 });
 
+describe('Title Case a Sentence', function() {
+  describe('#titleCase', function() {
+    it('should return the provided string with the first letter of each word capitalized.', function() {
+
+      function titleCase(str) {
+
+        str = str.toLowerCase().
+        split(' ').
+        map(function(word){
+          word = word.split('');
+          word[0] = word[0].toUpperCase();
+          return word.join('');
+        }).
+        join(' ');
+
+        return str;
+      }
+
+      titleCase("I'm a little tea pot").should.be.a('string')
+      titleCase("I'm a little tea pot").should.equal("I'm A Little Tea Pot");
+      titleCase("sHoRt AnD sToUt").should.equal("Short And Stout");
+      titleCase("HERE IS MY HANDLE HERE IS MY SPOUT").should.equal("Here Is My Handle Here Is My Spout");
+
+    });
+  });
+});
+
 
 
 
